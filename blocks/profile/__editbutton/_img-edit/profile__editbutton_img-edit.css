@@ -1,17 +1,16 @@
 .profile__editbutton_img-edit {
-	border: 1px solid #ffffff;
-	max-width: 10px;
-	padding: 7px;
-	/*cursor: pointer;*/
+    border: 1px solid #ffffff;
+    max-width: 10px;
+    padding: 7px;
 }
 
 .profile__editbutton_img-edit:hover {
-	opacity: 0.6;
+    opacity: 0.6;
 }
 
 @media (max-width: 768px) {
-	.profile__editbutton_img-edit {
-		max-width: 7.5px;
-		padding: 5.25px;
-	}
+    .profile__editbutton_img-edit {
+        max-width: 7.5px;
+        padding: 5.25px;
+    }
 }

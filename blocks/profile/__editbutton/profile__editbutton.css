@@ -1,25 +1,23 @@
 .profile__editbutton {
-	color:#ffffff;
-	padding: 35px 0 0 18px;
-	align-self: start;
-
+    color: #ffffff;
+    padding: 35px 0 0 18px;
+    align-self: start;
 }
 
 @media (max-width: 768px) {
-	.profile__editbutton {
-		padding: 32px 0 0 15.25px;
-	}
+    .profile__editbutton {
+        padding: 32px 0 0 15.25px;
+    }
 }
 
 @media (max-width: 400px) {
-	.profile__editbutton {
-		padding-left:0;
-	}
+    .profile__editbutton {
+        padding-left: 0;
+    }
 }
 
-
 @media (max-width: 371px) {
-	.profile__editbutton {
-		padding: 8px 0 0 10px;
-	}
+    .profile__editbutton {
+        padding: 8px 0 0 10px;
+    }
 }

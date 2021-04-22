@@ -1,11 +1,10 @@
 .main {
-    margin: 0 ;
+    margin: 0;
     padding: 0;
 }
 
-
 @media (max-width: 1024px) {
-	.main {
-   		margin: 0 19px;
-	}
+    .main {
+        margin: 0 19px;
+    }
 }

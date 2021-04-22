@@ -1,9 +1,9 @@
 .card__group {
-	background-color: #ffffff;
-	margin:0;
-	padding: 25px 15px 31px 21px;
-	border-radius: 0 0 10px 10px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 25px 15px 31px 21px;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }

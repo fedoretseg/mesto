@@ -1,18 +1,18 @@
 .cards {
-	display: grid;
+    display: grid;
     gap: 17px;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 @media (max-width: 1024px) {
-	.cards {
-		gap: 19px;
-	    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-	}
+    .cards {
+        gap: 19px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
 }
 
 @media (max-width: 768px) {
-	.cards {
-	    grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
-	}
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
+    }
 }

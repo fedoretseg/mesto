@@ -1,22 +1,20 @@
 .profile__addbutton_img-add {
-	border: 2px solid #ffffff;
-	max-width: 22px;
-	padding: 0 64px;
-	height: 50px;
-	border-radius: 2px;
+    border: 2px solid #ffffff;
+    max-width: 22px;
+    padding: 0 64px;
+    height: 50px;
+    border-radius: 2px;
 }
 
 .profile__addbutton_img-add:hover {
-	opacity: 0.6;
+    opacity: 0.6;
 }
 
-
 @media (max-width: 768px) {
-	.profile__addbutton_img-add {
-		/*border: none;*/
-		max-width: 16px;
-		height: 50px;
-		text-align: center;
-		padding: 0 133px;
-	}
+    .profile__addbutton_img-add {
+        max-width: 16px;
+        height: 50px;
+        text-align: center;
+        padding: 0 133px;
+    }
 }
