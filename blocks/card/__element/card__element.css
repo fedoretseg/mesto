@@ -1,0 +1,11 @@
+.card__element {
+	max-width: 282px;
+	border-radius: 10px 10px 0 0;
+}
+
+@media (max-width: 1024px) {
+	.card__element {
+		max-width: 100%;
+		height:auto;
+	}
+}

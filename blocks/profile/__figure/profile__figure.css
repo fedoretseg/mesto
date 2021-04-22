@@ -1,0 +1,21 @@
+.profile__figure {
+	color:#ffffff;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+
+@media (max-width: 768px) {
+	.profile__figure {
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+	}
+}

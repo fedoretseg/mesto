@@ -1,0 +1,10 @@
+.profile__addbutton {
+	color:#ffffff;
+}
+
+@media (max-width: 768px) {
+	.profile__addbutton {
+		/*border: 2px solid #ffffff;*/
+		/*width:282px;*/
+	}
+}

@@ -1,0 +1,50 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts/__inter/fonts__inter.css);
+
+@import url(../blocks/body/body.css);
+
+@import url(../blocks/page/page.css);
+
+@import url(../blocks/link/link.css);
+
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__logo/header__logo.css);
+@import url(../blocks/header/__logo-svg/header__logo-svg.css);
+
+@import url(../blocks/main/main.css);
+
+@import url(../blocks/profile/profile.css);
+@import url(../blocks/profile/__figure/profile__figure.css);
+@import url(../blocks/profile/__image/profile__image.css);
+@import url(../blocks/profile/__caption/profile__caption.css);
+@import url(../blocks/profile/__name/profile__name.css);
+@import url(../blocks/profile/__editbutton/profile__editbutton.css);
+@import url(../blocks/profile/__editbutton/_img-edit/profile__editbutton_img-edit.css);
+@import url(../blocks/profile/__profession/profile__profession.css);
+@import url(../blocks/profile/__addbutton/profile__addbutton.css);
+@import url(../blocks/profile/__addbutton/_img-add/profile__addbutton_img-add.css);
+
+@import url(../blocks/cards/cards.css);
+
+@import url(../blocks/card/card.css);
+@import url(../blocks/card/__element/card__element.css);
+@import url(../blocks/card/__group/card__group.css);
+@import url(../blocks/card/__place/card__place.css);
+@import url(../blocks/card/__heart/card__heart.css);
+
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__copyright/footer__copyright.css);
+
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/popup/_opened/popup_opened.css);
+@import url(../blocks/popup/__container/popup__container.css);
+@import url(../blocks/popup/__close/popup__close.css);
+@import url(../blocks/popup/__title/popup__title.css);
+@import url(../blocks/popup/__form/popup__form.css);
+@import url(../blocks/popup/__form/_text/popup__form_text.css);
+@import url(../blocks/popup/__form/_submit/popup__form_submit.css);
+@import url(../blocks/popup/__form/_name-input/popup__form_name-input.css);
+@import url(../blocks/popup/__form/_job-input/popup__form_job-input.css);
+
+
+
