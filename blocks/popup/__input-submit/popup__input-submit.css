@@ -13,6 +13,7 @@
     padding-top: 14px;
     padding-bottom: 18px;
     cursor: pointer;
+    transition: all 1s ease-out;
 }
 
 .popup__input-submit:hover {
