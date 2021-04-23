@@ -1,3 +1,35 @@
 .profile__addbutton {
+    background-image: url(../../../images/pluse.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: 22px 22px;
+    width:150px;
+    height:50px;
     color: #ffffff;
+    margin: 37px 0 0 18px;
+    align-self: flex-start;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.profile__addbutton:hover {
+    opacity: 0.6;
+}
+
+
+@media (max-width: 768px) {
+	.profile__addbutton {
+		margin: 0 auto;
+		background-size: 16px 16px;
+	    width:50%;
+	    height:50px;
+	}
+}
+
+@media (max-width: 425px) {
+	.profile__addbutton {
+	    width:100%;
+	}
 }

@@ -1,23 +1,45 @@
 .profile__editbutton {
+    background-image: url(../../../images/pencil.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: 10px 10px;
+    width:24px;
+    height: 24px;
     color: #ffffff;
-    padding: 35px 0 0 18px;
-    align-self: start;
+    margin: 37px 0 0 18px;
+    align-self: flex-start;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+}
+
+.profile__editbutton:hover {
+    opacity: 0.6;
 }
 
 @media (max-width: 768px) {
     .profile__editbutton {
-        padding: 32px 0 0 15.25px;
+        background-size: 7.5px 7.5px;
+        width:18px;
+        height: 18px;
+        margin: 34px 0 0 10px;
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 402px) {
     .profile__editbutton {
-        padding-left: 0;
+        margin: 14px 0 20px 5px;
     }
 }
 
-@media (max-width: 371px) {
+@media (max-width: 391px) {
     .profile__editbutton {
-        padding: 8px 0 0 10px;
+        margin: -40px 0 0 0;
+    }
+}
+
+@media (max-width: 373px) {
+    .profile__editbutton {
+        margin: 8px 0 0 10px;
     }
 }

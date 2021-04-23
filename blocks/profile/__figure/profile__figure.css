@@ -12,9 +12,6 @@
     .profile__figure {
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
         text-align: center;
-        margin: 0;
-        padding: 0;
     }
 }
