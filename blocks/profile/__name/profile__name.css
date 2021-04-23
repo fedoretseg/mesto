@@ -8,7 +8,7 @@
     margin-block-start: 0;
     margin-block-end: 0;
     text-overflow: ellipsis;
-    max-width: 80vw;
+    max-width: 400px;
     overflow: hidden;
     white-space: nowrap; 
 }
@@ -17,5 +17,11 @@
     .profile__name {
         font-size: 27px;
         line-height: 33px;
+    }
+}
+
+@media (max-width: 425px) {
+    .profile__name {
+        max-width: 200px;
     }
 }
