@@ -12,9 +12,6 @@ let profileProfession = document.querySelector(".profile__profession");
 function togglePopupEditbutton(evt) {
     evt.preventDefault();
     popup.classList.toggle("popup_opened");
-    profileCaption.insertAdjacentHTML(`
-    	<h1 class="profile__name">${profileName.textContent}</h1>
-        <p class="profile__profession">${profileProfession.textContent}</p>`)
     // nameInput.value = profileName.textContent;
     // jobInput.value = profileProfession.textContent;
 }
@@ -35,7 +32,7 @@ function editProfile(evt) {
 //отрабатываем действия
 openPopupEditbutton.addEventListener("click", togglePopupEditbutton);
 closePopupEditbutton.addEventListener("click", togglePopupEditbutton);
-// formElement.addEventListener("submit", togglePopupEditbutton);
+formElement.addEventListener("submit", togglePopupEditbutton);
 formElement.addEventListener("submit", editProfile);
 
 
