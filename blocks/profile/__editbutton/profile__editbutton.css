@@ -34,7 +34,7 @@
 
 @media (max-width: 391px) {
     .profile__editbutton {
-        margin: -40px 0 0 0;
+        margin: 0 0 15px 0;
     }
 }
 

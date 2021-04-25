@@ -10,7 +10,6 @@
 
 @media (max-width: 768px) {
     .profile__figure {
-        flex-wrap: wrap;
         justify-content: center;
         text-align: center;
     }

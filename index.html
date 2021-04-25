@@ -21,7 +21,7 @@
                             <h1 class="profile__name">Жак-Ив Кусто</h1>
                             <p class="profile__profession">Исследователь океана</p>
                         </div>
-                         <button type="button" class="profile__editbutton"></button> 
+                         <button aria-label="open" type="button" class="profile__editbutton"></button> 
                     </div>
                     <button type="button" class="profile__addbutton"></button> 
                 </section>
@@ -30,42 +30,42 @@
                         <img class="card__element" src="./images/karachaevsk.png" alt="Карачаевск" />
                         <div class="card__group">
                             <h2 class="card__place">Карачаевск</h2>
-                            <button type="button" class="card__heart"></button>
+                            <button aria-label="like" type="button" class="card__heart"></button>
                         </div>
                     </div>
                     <div class="card">
                         <img class="card__element" src="./images/elbrus.png" alt="Эльбрус" />
                         <div class="card__group">
                             <h2 class="card__place">Эльбрус</h2>
-                            <button type="button" class="card__heart"></button>
+                            <button aria-label="like" type="button" class="card__heart"></button>
                         </div>
                     </div>
                     <div class="card">
                         <img class="card__element" src="./images/dombay.png" alt="Домбай" />
                         <div class="card__group">
                             <h2 class="card__place">Домбай</h2>
-                            <button type="button" class="card__heart"></button>
+                            <button aria-label="like" type="button" class="card__heart"></button>
                         </div>
                     </div>
                     <div class="card">
                         <img class="card__element" src="./images/kamchatka.png" alt="Камчатка" />
                         <div class="card__group">
                             <h2 class="card__place">Камчатка</h2>
-                            <button type="button" class="card__heart"></button>
+                            <button aria-label="like" type="button" class="card__heart"></button>
                         </div>
                     </div>
                     <div class="card">
                         <img class="card__element" src="./images/sayany.png" alt="Саяны" />
                         <div class="card__group">
                             <h2 class="card__place">Саяны</h2>
-                            <button type="button" class="card__heart"></button>
+                            <button aria-label="like" type="button" class="card__heart"></button>
                         </div>
                     </div>
                     <div class="card">
                         <img class="card__element" src="./images/baikal.png" alt="Бухта Песчанная о.Байкал" />
                         <div class="card__group">
                             <h2 class="card__place">Бухта Песчанная о.Байкал</h2>
-                            <button type="button" class="card__heart"></button>
+                            <button aria-label="like" type="button" class="card__heart"></button>
                         </div>
                     </div>
                 </section>
@@ -78,9 +78,9 @@
             <div class="popup__container">
                 <button aria-label="close" type="button" class="popup__close"></button>
                 <h2 class="popup__title">Редактировать профиль</h2>
-                <form class="popup__form" name="form">
-                    <input class="popup__input-name" type="text" name="firstname-lastname" required placeholder="Жак-Ив Кусто" value="" />
-                    <input class="popup__input-job" type="text" name="profession" required placeholder="Исследователь океана" value="" />
+                <form class="popup__form" name="form-popup-edit">
+                    <input class="popup__input popup__input_name" type="text" name="firstname" required placeholder="Жак-Ив Кусто" value="" />
+                    <input class="popup__input popup__input_job" type="text" name="profession" required placeholder="Исследователь океана" value="" />
                     <input class="popup__input-submit" type="submit" name="submit" value="Сохранить" />
                 </form>
             </div>
