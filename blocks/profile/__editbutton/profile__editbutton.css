@@ -26,19 +26,7 @@
     }
 }
 
-@media (max-width: 402px) {
-    .profile__editbutton {
-        margin: 14px 0 20px 5px;
-    }
-}
-
-@media (max-width: 391px) {
-    .profile__editbutton {
-        margin: 0 0 15px 0;
-    }
-}
-
-@media (max-width: 373px) {
+@media (max-width: 425px) {
     .profile__editbutton {
         margin: 8px 0 0 10px;
     }

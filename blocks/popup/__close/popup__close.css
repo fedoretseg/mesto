@@ -9,6 +9,7 @@
     border: none;
     cursor: pointer;
     transition: all 1s ease-out;
+    background-size: contain;
 }
 
 .popup__close:hover {

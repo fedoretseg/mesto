@@ -14,15 +14,10 @@ function openPopup() {
     jobInput.value = profileProfession.textContent;
 }
 
+//закрываем popup на крестик 
 function closePopup() {
     popup.classList.remove('popup_opened');
 }
-//закрываем popup без изменения данных
-// popup.addEventListener("click", function(evt) {
-//     if (evt.target === evt.currentTarget) {
-//         togglePopupEditbutton(evt);
-//     }
-// });
 
 //закрываем popup с сохранением измененных данных
 function editProfile(evt) {
