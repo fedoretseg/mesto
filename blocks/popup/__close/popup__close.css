@@ -9,7 +9,7 @@
     border: none;
     cursor: pointer;
     transition: all 1s ease-out;
-    background-size: contain;
+    background-size: 56.56px 56.56px;
 }
 
 .popup__close:hover {
@@ -21,5 +21,6 @@
         width: 26px;
         height: 26px;
         right: 0;
+        background-size: 36.76px 36.76px;
     }
 }

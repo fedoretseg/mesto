@@ -22,11 +22,12 @@
         font-size: 14px;
         line-height: 17px;
         margin: 14px 0 36px 0;
+        max-width: 250px;
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 470px) {
     .profile__profession {
-        max-width: 250px;
+        max-width: 200px;
     }
 }

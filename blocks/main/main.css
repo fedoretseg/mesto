@@ -1,6 +1,7 @@
 .main {
     margin: 0;
     padding: 0;
+    min-width: 282px;
 }
 
 @media (max-width: 1024px) {
