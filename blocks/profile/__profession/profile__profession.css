@@ -11,6 +11,12 @@
     white-space: nowrap;
 }
 
+@media (max-width: 900px) {
+    .profile__profession {
+        max-width: 350px;
+    }
+}
+
 @media (max-width: 768px) {
     .profile__profession {
         font-size: 14px;
