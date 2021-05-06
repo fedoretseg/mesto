@@ -13,6 +13,7 @@
                     <img class="header__logo-svg" src="./images/logo-mesto-russia.svg" alt="Логотип Mesto Russia" />
                 </a>
             </header>
+
             <main class="main">
                 <section class="profile">
                     <div class="profile__figure">
@@ -26,65 +27,50 @@
                     <button type="button" class="profile__addbutton"></button> 
                 </section>
                 <section class="cards">
-                    <div class="card">
-                        <img class="card__element" src="./images/karachaevsk.png" alt="Карачаевск" />
-                        <div class="card__group">
-                            <h2 class="card__place">Карачаевск</h2>
-                            <button aria-label="like" type="button" class="card__heart"></button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card__element" src="./images/elbrus.png" alt="Эльбрус" />
-                        <div class="card__group">
-                            <h2 class="card__place">Эльбрус</h2>
-                            <button aria-label="like" type="button" class="card__heart"></button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card__element" src="./images/dombay.png" alt="Домбай" />
-                        <div class="card__group">
-                            <h2 class="card__place">Домбай</h2>
-                            <button aria-label="like" type="button" class="card__heart"></button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card__element" src="./images/kamchatka.png" alt="Камчатка" />
-                        <div class="card__group">
-                            <h2 class="card__place">Камчатка</h2>
-                            <button aria-label="like" type="button" class="card__heart"></button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card__element" src="./images/sayany.png" alt="Саяны" />
-                        <div class="card__group">
-                            <h2 class="card__place">Саяны</h2>
-                            <button aria-label="like" type="button" class="card__heart"></button>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card__element" src="./images/baikal.png" alt="Бухта Песчанная о.Байкал" />
-                        <div class="card__group">
-                            <h2 class="card__place">Бухта Песчанная о.Байкал</h2>
-                            <button aria-label="like" type="button" class="card__heart"></button>
-                        </div>
-                    </div>
+                    
                 </section>
             </main>
             <footer class="footer">
                 <p class="footer__copyright">&copy; 2021. Mesto Russia</p>
             </footer>
         </div>
-        <div class="popup">
+
+
+        <div class="popup popup_edit_profile">
             <div class="popup__container">
-                <button aria-label="close" type="button" class="popup__close"></button>
+                <button aria-label="close" type="button" class="popup__close popup__close_profile"></button>
                 <h2 class="popup__title">Редактировать профиль</h2>
-                <form class="popup__form" name="form-popup-edit">
+                <form class="popup__form popup__form_edit_profile" name="form-popup-edit">
                     <input class="popup__input popup__input_type_name" type="text" name="firstname" required placeholder="Жак-Ив Кусто" value="" />
                     <input class="popup__input popup__input_type_job" type="text" name="profession" required placeholder="Исследователь океана" value="" />
                     <input class="popup__input-submit" type="submit" name="submit" value="Сохранить" />
                 </form>
             </div>
         </div>
+
+        <div class="popup popup_add_card">
+            <div class="popup__container">
+                <button aria-label="close" type="button" class="popup__close popup__close_card"></button>
+                <h2 class="popup__title">Новое место</h2>
+                <form class="popup__form popup__form_add_card" name="form-popup-edit">
+                    <input class="popup__input popup__input_type_place" type="text" name="firstname" required placeholder="Название" value="" />
+                    <input class="popup__input popup__input_type_img" type="text" name="profession" required placeholder="Ссылка на картинку" value="" />
+                    <input class="popup__input-submit" type="submit" name="submit" value="Сохранить" />
+                </form>
+            </div>
+        </div>
+
+        <template id="task-template">
+            <div class="card">
+                <button aria-label="trash" type="button" class="card__trash"></button>
+                <img class="card__element" src="" alt="Изображение" />
+                <div class="card__group">
+                    <h2 class="card__place"></h2>
+                    <button aria-label="like" type="button" class="card__heart"></button>
+                </div>
+            </div>
+        </template>
+
         <script src="./scripts/index.js" defer></script>
     </body>
 </html>
