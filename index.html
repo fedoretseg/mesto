@@ -48,13 +48,23 @@
             </div>
         </div>
 
+        <div class="popup popup_big_img">
+            <div class="popup__container">
+                <button aria-label="close" type="button" class="popup__close popup__close_big_img"></button>
+                <form class="popup__form popup__form__big_img" name="form-popup-big-img">
+                    <img class="popup__form_img" src="" alt="Картинка" />
+                    <p class="popup__form_text"></p>
+                </form>
+            </div>
+        </div>
+
         <div class="popup popup_add_card">
             <div class="popup__container">
                 <button aria-label="close" type="button" class="popup__close popup__close_card"></button>
                 <h2 class="popup__title">Новое место</h2>
-                <form class="popup__form popup__form_add_card" name="form-popup-edit">
-                    <input class="popup__input popup__input_type_place" type="text" name="firstname" required placeholder="Название" value="" />
-                    <input class="popup__input popup__input_type_img" type="text" name="profession" required placeholder="Ссылка на картинку" value="" />
+                <form class="popup__form popup__form_add_card" name="form-popup-add">
+                    <input class="popup__input popup__input_type_place" type="text" name="placename" required placeholder="Название" value="" />
+                    <input class="popup__input popup__input_type_img" type="text" name="link" required placeholder="Ссылка на картинку" value="Ссылка на картинку" />
                     <input class="popup__input-submit" type="submit" name="submit" value="Сохранить" />
                 </form>
             </div>

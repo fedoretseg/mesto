@@ -18,7 +18,7 @@
     overflow: hidden;
 }
 
-.card__heart:active {
-    opacity: 1;
+.card__heart_active {
+    /*opacity: 1;*/
     background-image: url(../../../images/heart-dark.svg);
 }

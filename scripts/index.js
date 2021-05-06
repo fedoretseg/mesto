@@ -78,6 +78,12 @@ function createCard(cardItem){
 		evt.target.closest('.card').remove();
 	});
 
+	const cardHeart = newItem.querySelector('.card__heart');
+	cardHeart.addEventListener('click', evt => {
+	  evt.target.classList.toggle('card__heart_active');
+	});
+
+
 	return newItem;
 };
 
@@ -112,6 +118,8 @@ function addProfile(evt) {
     closePopupAdd();
 }
 
+
+
 //отрабатываем действия popup profile
 openPopupEditbutton.addEventListener('click', openPopupEdit);
 closePopupEditbutton.addEventListener('click', closePopupEdit);
@@ -121,3 +129,6 @@ formElement.addEventListener('submit', editProfile);
 openPopupAddbutton.addEventListener('click', openPopupAdd);
 closePopupAddbutton.addEventListener('click', closePopupAdd);
 formCard.addEventListener('submit', addProfile);
+
+
+
