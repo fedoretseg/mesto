@@ -25,6 +25,8 @@ const initialCards = [
   }
 ]; 
 
+
+
 //popup profile
 const openPopupEditbutton = document.querySelector('.profile__editbutton');
 const popupEdit = document.querySelector('.popup_edit_profile');
@@ -45,6 +47,31 @@ const imgInput = document.querySelector('.popup__input_type_img');
 const buttonSave = document.querySelector('.popup__input-submit');
 const tasksContainer = document.querySelector('.cards');
 const taskTemplate = document.querySelector('#task-template');
+const taskCard = taskTemplate.content.querySelector('.card');
+
+
+//popup img
+const openPopupImgbutton = taskCard.querySelector('.card__element');
+const popupImg = document.querySelector('.popup_with_img');
+const closePopupImgbutton = document.querySelector('.popup__close_img');
+const formWithImg = document.querySelector('.popup__form_with_img');
+const formImg = document.querySelector('.form__img');
+const formText = document.querySelector('.form__text');
+const cardImg = document.querySelector('.card__element');
+const cardPlace = document.querySelector('.card__place');
+
+
+//открываем popup Img
+function openPopupImg() {
+    popupImg.classList.toggle('popup_opened');
+    formImg.src = cardImg.src;
+    formText.textContent = cardPlace.textContent;
+}
+
+//закрываем popup Img на крестик 
+function closePopupImg() {
+    popupImg.classList.remove('popup_opened');
+}
 
 
 //открываем popup profile
@@ -68,6 +95,8 @@ function editProfile(evt) {
     closePopupEdit();
 }
 
+
+
 //создаем карточку через popup card
 function createCard(cardItem){
 	const newItem = taskTemplate.content.querySelector('.card').cloneNode(true);
@@ -82,7 +111,6 @@ function createCard(cardItem){
 	cardHeart.addEventListener('click', evt => {
 	  evt.target.classList.toggle('card__heart_active');
 	});
-
 
 	return newItem;
 };
@@ -105,7 +133,7 @@ function closePopupAdd() {
 
 //закрываем popup card с сохранением измененных данных
 //удаляем card click trash
-function addProfile(evt) {
+function addCard(evt) {
     evt.preventDefault();
     const newItem = taskTemplate.content.querySelector('.card').cloneNode(true);
 	newItem.querySelector('.card__place').textContent = placeInput.value;
@@ -115,9 +143,14 @@ function addProfile(evt) {
 		evt.target.closest('.card').remove();
 	});
 	tasksContainer.prepend(newItem);
+
+	const cardHeart = newItem.querySelector('.card__heart');
+	cardHeart.addEventListener('click', evt => {
+	  evt.target.classList.toggle('card__heart_active');
+	});
+
     closePopupAdd();
 }
-
 
 
 //отрабатываем действия popup profile
@@ -128,7 +161,12 @@ formElement.addEventListener('submit', editProfile);
 //отрабатываем действия popup card
 openPopupAddbutton.addEventListener('click', openPopupAdd);
 closePopupAddbutton.addEventListener('click', closePopupAdd);
-formCard.addEventListener('submit', addProfile);
+formCard.addEventListener('submit', addCard);
 
+
+//отрабатываем действия popup img
+openPopupImgbutton.addEventListener('click', openPopupImg);
+closePopupImgbutton.addEventListener('click', closePopupImg);
+// formElement.addEventListener('submit', editProfile);
 
 

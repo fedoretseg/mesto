@@ -1,7 +1,10 @@
 .card__element {
 	display: block;
-    max-width: 282px;
+	max-width: 282px;
+    /*width: 282px;
+    height: 282px;*/
     border-radius: 10px 10px 0 0;
+    cursor: pointer;
 }
 
 @media (max-width: 1024px) {
