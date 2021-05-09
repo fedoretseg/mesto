@@ -1,7 +1,7 @@
 .cards {
     display: grid;
     gap: 17px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 282px);
 }
 
 @media (max-width: 1024px) {
