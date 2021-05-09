@@ -54,8 +54,8 @@ const popupImg = document.querySelector('.popup_with_img');
 const сontainerImg = document.querySelector('.popup__container-img');
 const popupFormWithImg = сontainerImg.querySelector('.popup__form_with_img');
 const closePopupImgButton = сontainerImg.querySelector('.popup__close_img');
-const popupFormImg = popupFormWithImg.querySelector('.popup__form_img');
-const popupFormText = popupFormWithImg.querySelector('.popup__form_text');
+const popupFormImg = popupFormWithImg.querySelector('.popup__bigimg');
+const popupFormText = popupFormWithImg.querySelector('.popup__bigtext');
 
 
 //opened & close popup
