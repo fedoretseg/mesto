@@ -1,86 +1,101 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Место Россия</title>
-        <link rel="stylesheet" href="./pages/index.css" />
-    </head>
-    <body class="body">
-        <div class="page">
-            <header class="header">
-                <a href="#" target="_blank" class="header__logo">
-                    <img class="header__logo-svg" src="./images/logo-mesto-russia.svg" alt="Логотип Mesto Russia" />
-                </a>
-            </header>
 
-            <main class="main">
-                <section class="profile">
-                    <div class="profile__figure">
-                        <img class="profile__image" src="./images/jak-iv-kusto.jpg" alt="Жак-Ив Кусто - Французский исследователь Мирового океана" />
-                        <div class="profile__caption">
-                            <h1 class="profile__name">Жак-Ив Кусто</h1>
-                            <p class="profile__profession">Исследователь океана</p>
-                        </div>
-                        <button aria-label="open" type="button" class="profile__editbutton"></button>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Место Россия</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+</head>
+
+<body class="body">
+    <div class="page">
+        <header class="header">
+            <a href="#" target="_blank" class="header__logo">
+                <img class="header__logo-svg" src="./images/logo-mesto-russia.svg" alt="Логотип Mesto Russia" />
+            </a>
+        </header>
+
+        <main class="main">
+            <section class="profile">
+                <div class="profile__figure">
+                    <img class="profile__image" src="./images/jak-iv-kusto.jpg"
+                        alt="Жак-Ив Кусто - Французский исследователь Мирового океана" />
+                    <div class="profile__caption">
+                        <h1 class="profile__name">Жак-Ив Кусто</h1>
+                        <p class="profile__profession">Исследователь океана</p>
                     </div>
-                    <button type="button" class="profile__addbutton"></button>
-                </section>
-                <section class="cards">
-                    
-                </section>
-            </main>
-            <footer class="footer">
-                <p class="footer__copyright">&copy; 2021. Mesto Russia</p>
-            </footer>
-        </div>
-
-
-        <div class="popup popup_edit_profile">
-            <div class="popup__container">
-                <button aria-label="close" type="button" class="popup__close popup__close_profile"></button>
-                <h2 class="popup__title">Редактировать профиль</h2>
-                <form class="popup__form popup__form_edit_profile" name="form-popup-edit">
-                    <input class="popup__input popup__input_type_name" type="text" name="firstname" required placeholder="Жак-Ив Кусто" value="" />
-                    <input class="popup__input popup__input_type_job" type="text" name="profession" required placeholder="Исследователь океана" value="" />
-                    <input class="popup__input-submit" type="submit" name="submit" value="Сохранить" />
-                </form>
-            </div>
-        </div>
-
-        <div class="popup popup_with_img">
-            <div class="popup__container-img">
-                <button aria-label="close" type="button" class="popup__close popup__close_img"></button>
-                <form class="popup__form popup__form_with_img" name="form-with-img">
-                    <img class="popup__bigimg" src="https://fedoretseg.github.io/mesto/images/baikal.png" alt="Картинка" />
-                    <p class="popup__bigtext"></p>
-                </form>
-            </div>    
-        </div>
-
-        <div class="popup popup_add_card">
-            <div class="popup__container">
-                <button aria-label="close" type="button" class="popup__close popup__close_card"></button>
-                <h2 class="popup__title">Новое место</h2>
-                <form class="popup__form popup__form_add_card" name="form-popup-add">
-                    <input class="popup__input popup__input_type_place" type="text" name="placename" required placeholder="Название" value="" />
-                    <input class="popup__input popup__input_type_img" type="text" name="link" required placeholder="Ссылка на картинку" value="" />
-                    <input class="popup__input-submit" type="submit" name="submit" value="Сохранить" />
-                </form>
-            </div>
-        </div>
-
-        <template id="task-template">
-            <div class="card">
-                <button aria-label="trash" type="button" class="card__trash"></button>
-                <img class="card__element" src="https://fedoretseg.github.io/mesto/images/baikal.png" alt="Изображение" />
-                <div class="card__group">
-                    <h2 class="card__place"></h2>
-                    <button aria-label="like" type="button" class="card__heart"></button>
+                    <button aria-label="open" type="button" class="profile__editbutton"></button>
                 </div>
-            </div>
-        </template>
+                <button type="button" class="profile__addbutton"></button>
+            </section>
+            <section class="cards">
 
-        <script src="./scripts/index.js" defer></script>
-    </body>
+            </section>
+        </main>
+        <footer class="footer">
+            <p class="footer__copyright">&copy; 2021. Mesto Russia</p>
+        </footer>
+    </div>
+
+    <!-- Формы для валидации -->
+
+    <div class="popup popup_edit_profile">
+        <div class="popup__container">
+            <button aria-label="close" type="button" class="popup__close popup__close_profile"></button>
+            <h2 class="popup__title">Редактировать профиль</h2>
+            <form class="popup__form popup__form_edit_profile" name="form-popup-edit" novalidate>
+                <input id="user-name" class="popup__input popup__input_type_name" type="text" name="firstname"
+                    minlength="2" maxlength="40" required placeholder="Жак-Ив Кусто" value="" />
+                <span id="user-name-error" class="error"></span>
+                <input id="about" class="popup__input popup__input_type_job" type="text" name="profession" minlength="2"
+                    maxlength="200" required placeholder="Исследователь океана" value="" />
+                <span id="about-error" class="error"></span>
+                <input class="popup__input-submit" type="submit" name="submit" value="Сохранить" />
+            </form>
+        </div>
+    </div>
+
+    <div class="popup popup_add_card">
+        <div class="popup__container">
+            <button aria-label="close" type="button" class="popup__close popup__close_card"></button>
+            <h2 class="popup__title">Новое место</h2>
+            <form class="popup__form popup__form_add_card" name="form-popup-add" novalidate>
+                <input id="name-card" class="popup__input popup__input_type_place" type="text" name="placename"
+                    minlength="2" maxlength="30" required placeholder="Название" value="" />
+                <span id="name-card-error" class="error"></span>
+                <input id="link" class="popup__input popup__input_type_img" type="url" name="link" required
+                    placeholder="Ссылка на картинку" value="" />
+                <span id="link-error" class="error"></span>
+                <input class="popup__input-submit" type="submit" name="submit" value="Сохранить" />
+            </form>
+        </div>
+    </div>
+
+    <!-- Формы для валидации -->
+
+    <div class="popup popup_with_img">
+        <div class="popup__container-img">
+            <button aria-label="close" type="button" class="popup__close popup__close_img"></button>
+            <form class="popup__form popup__form_with_img" name="form-with-img">
+                <img class="popup__bigimg" src="https://fedoretseg.github.io/mesto/images/baikal.png" alt="Картинка" />
+                <p class="popup__bigtext"></p>
+            </form>
+        </div>
+    </div>
+
+    <template id="task-template">
+        <div class="card">
+            <button aria-label="trash" type="button" class="card__trash"></button>
+            <img class="card__element" src="https://fedoretseg.github.io/mesto/images/baikal.png" alt="Изображение" />
+            <div class="card__group">
+                <h2 class="card__place"></h2>
+                <button aria-label="like" type="button" class="card__heart"></button>
+            </div>
+        </div>
+    </template>
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/validate.js"></script>
+</body>
+
 </html>

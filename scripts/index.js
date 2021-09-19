@@ -23,7 +23,7 @@ const initialCards = [
     name: 'Бухта Песчанная о.Байкал',
     link: 'https://fedoretseg.github.io/mesto/images/baikal.png'
   }
-]; 
+];
 
 
 //popup profile
@@ -58,112 +58,169 @@ const popupFormImg = popupFormWithImg.querySelector('.popup__bigimg');
 const popupFormText = popupFormWithImg.querySelector('.popup__bigtext');
 
 
+
+popupEdit.onclick = (e) => {
+
+  if (e.target.classList.contains("popup_opened")) {
+    closePopup(popupEdit);
+  }
+
+
+};
+
+popupImg.onclick = (e) => {
+
+
+  if (e.target.classList.contains("popup_opened")) {
+    closePopup(popupImg);
+  }
+
+
+};
+
+popupAdd.onclick = (e) => {
+
+
+  if (e.target.classList.contains("popup_opened")) {
+    closePopup(popupAdd);
+  }
+
+
+};
+let activePopup = null;
+
+document.querySelector('body').onkeydown = (evt) => {
+  if (activePopup != null && evt.key === 'Escape') {
+    closePopup(activePopup);
+  }
+};
+
 //opened & close popup
 function openPopup(popup) {
-    popup.classList.add('popup_opened');
+  popup.classList.add('popup_opened');
+  activePopup = popup;
 };
 
 function closePopup(popup) {
-    popup.classList.remove('popup_opened');
+  popup.classList.remove('popup_opened');
+  activePopup = null;
 };
-
 
 //закрываем popup profile с сохранением измененных данных
 function editProfile(evt) {
-    evt.preventDefault();
-    profileName.textContent = nameInput.value;
-    profileProfession.textContent = jobInput.value;
-    closePopup(popupEdit);
+  evt.preventDefault();
+  profileName.textContent = nameInput.value;
+  profileProfession.textContent = jobInput.value;
+  closePopup(popupEdit);
 };
 
 //создаем шаблон карточки через popup card & like heart & trash & open big img
 function createCard(newItemElement, newItemPlace) {
-    const newItem = taskCard.cloneNode(true);
-    const cardElement = newItem.querySelector('.card__element');
-    const cardPlace = newItem.querySelector('.card__place');
+  const newItem = taskCard.cloneNode(true);
+  const cardElement = newItem.querySelector('.card__element');
+  const cardPlace = newItem.querySelector('.card__place');
 
-    cardElement.src = newItemElement;
-    cardElement.alt = newItemPlace;
-    cardPlace.textContent = newItemPlace;
+  cardElement.src = newItemElement;
+  cardElement.alt = newItemPlace;
+  cardPlace.textContent = newItemPlace;
 
-    newItem.querySelector('.card__heart').addEventListener('click', function(evt) {
-        evt.target.classList.toggle('card__heart_active');
-    });
+  newItem.querySelector('.card__heart').addEventListener('click', function (evt) {
+    evt.target.classList.toggle('card__heart_active');
+  });
 
-    const cardRemoveButton = newItem.querySelector('.card__trash')
-    cardRemoveButton.addEventListener('click', function(evt){
-		evt.target.closest('.card').remove();
-    });
+  const cardRemoveButton = newItem.querySelector('.card__trash')
+  cardRemoveButton.addEventListener('click', function (evt) {
+    evt.target.closest('.card').remove();
+  });
 
-    clickOpenBigImg(newItem);
+  clickOpenBigImg(newItem);
 
-    return newItem;
+  return newItem;
 };
 
 //создаём new card
 function clickAddNewFormCard(evt) {
-    evt.preventDefault();
-    const newCard = createCard(imgInput.value, placeInput.value);
-    addCard(newCard);
-    closePopup(popupAdd);
+  evt.preventDefault();
+  const newCard = createCard(imgInput.value, placeInput.value);
+  addCard(newCard);
+  closePopup(popupAdd);
 };
 
 //создаем default cards ставим по порядку
-initialCards.forEach(function(element) {
-    const newCard = createCard(element.link, element.name);
-    сontainerСard.append(newCard);
+initialCards.forEach(function (element) {
+  const newCard = createCard(element.link, element.name);
+  сontainerСard.append(newCard);
 });
 
 //добавляем new card в начало
 function addCard(card) {
-    сontainerСard.prepend(card);
+  сontainerСard.prepend(card);
 };
 
 //открываем Big Img
 function clickOpenBigImg(taskCard) {
-	const cardElement = taskCard.querySelector('.card__element');
-    const cardTitle = taskCard.querySelector('.card__place');
+  const cardElement = taskCard.querySelector('.card__element');
+  const cardTitle = taskCard.querySelector('.card__place');
 
-    cardElement.addEventListener('click', function() {
+  cardElement.addEventListener('click', function (evt) {
     popupFormImg.src = cardElement.src;
     popupFormImg.textContent = cardTitle.alt;
     popupFormText.textContent = cardTitle.textContent;
     openPopup(popupImg);
-    });
+    evt.stopPropagation();
+  });
 };
 
 
-
-
 //отрабатываем действия popup profile
-openPopupEditButton.addEventListener('click', function() {
-    openPopup(popupEdit);
-    nameInput.value = profileName.textContent;
-    jobInput.value = profileProfession.textContent;
+openPopupEditButton.addEventListener('click', function (evt) {
+  openPopup(popupEdit);
+  nameInput.value = profileName.textContent;
+  jobInput.value = profileProfession.textContent;
+  evt.stopPropagation();
 });
 
-closePopupEditButton.addEventListener('click', function() { 
-	closePopup(popupEdit); 
+closePopupEditButton.addEventListener('click', function () {
+  closePopup(popupEdit);
 });
 
 popupFormEditProfile.addEventListener('submit', editProfile);
 
 
 //отрабатываем действия popup card
-openPopupAddButton.addEventListener('click', function() { 
-	openPopup(popupAdd); 
-	popupFormAddCard.reset();
+openPopupAddButton.addEventListener('click', function (evt) {
+  openPopup(popupAdd);
+  popupFormAddCard.reset();
+
+  const inputList = Array.from(popupFormAddCard.querySelectorAll(getClassForm.inputSelector));
+  const buttonElement = popupFormAddCard.querySelector(getClassForm.submitButtonSelector);
+
+  if (buttonElement === null) {
+    return;
+  }
+  toggleButtonState(inputList, buttonElement, getClassForm.inactiveButtonClass);
+  evt.stopPropagation();
 });
 
-closePopupAddButton.addEventListener('click', function() {
-    closePopup(popupAdd);
-    popupFormAddCard.reset();
+closePopupAddButton.addEventListener('click', function () {
+  closePopup(popupAdd);
+  popupFormAddCard.reset();
 });
 
 popupFormAddCard.addEventListener('submit', clickAddNewFormCard);
 
 
 //отрабатываем действия popup img
-closePopupImgButton.addEventListener('click', function() { 
-	closePopup(popupImg); 
+closePopupImgButton.addEventListener('click', function () {
+  closePopup(popupImg);
 });
+
+
+const getClassForm = {
+  formSelector: '.popup__form',
+  inputSelector: '.popup__input',
+  submitButtonSelector: '.popup__input-submit',
+  inactiveButtonClass: 'popup__input-submit_invalid',
+  inputErrorClass: 'popup__input_type_error',
+  errorClass: 'error_visible'
+};
