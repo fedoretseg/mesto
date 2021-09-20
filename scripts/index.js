@@ -59,36 +59,25 @@ const popupFormText = popupFormWithImg.querySelector('.popup__bigtext');
 
 
 
-popupEdit.onclick = (e) => {
-
-  if (e.target.classList.contains("popup_opened")) {
+popupEdit.onclick = (evt) => {
+  if (evt.target.classList.contains("popup_opened")) {
     closePopup(popupEdit);
   }
-
-
 };
 
-popupImg.onclick = (e) => {
-
-
-  if (e.target.classList.contains("popup_opened")) {
+popupImg.onclick = (evt) => {
+  if (evt.target.classList.contains("popup_opened")) {
     closePopup(popupImg);
   }
-
-
 };
 
-popupAdd.onclick = (e) => {
-
-
-  if (e.target.classList.contains("popup_opened")) {
+popupAdd.onclick = (evt) => {
+  if (evt.target.classList.contains("popup_opened")) {
     closePopup(popupAdd);
   }
-
-
 };
-let activePopup = null;
 
+let activePopup = null;
 document.querySelector('body').onkeydown = (evt) => {
   if (activePopup != null && evt.key === 'Escape') {
     closePopup(activePopup);
